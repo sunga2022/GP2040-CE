@@ -15,6 +15,7 @@ export default {
 		keyboard: 'Keyboard',
 		ps4: 'PS4',
 		ps5: 'PS5',
+		p5general: 'P5General',
 		neogeo: 'NEOGEO mini',
 		mdmini: 'Sega Genesis/MegaDrive Mini',
 		pcemini: 'PC Engine/Turbografx 16 Mini',
@@ -79,6 +80,8 @@ export default {
 		'<span>INFO:</span> Please ensure USB Peripheral is enabled and a PS5 compatible USB device is plugged in.',
 	'xbone-mode-text':
 		'<span>INFO:</span> Xbox One requires a USB host connection and USB dongle to properly authenticate in Xbox One mode.',
+	'p5general-mode-text':
+		'<span>INFO:</span> Requires a USB host connection and <span>P5General</span> to properly authenticate in PS5 general mode.',
 	'xinput-mode-text':
 		'<span>INFO:</span> Xinput will work on a PC without any authentication.  If you would like to on a Xbox 360 please choose USB authentication and attach an appropriate dongle.',
 	'hotkey-settings-label': 'Hotkey Settings',
