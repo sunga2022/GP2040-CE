@@ -2,9 +2,9 @@ name: CMake
 
 on:
   push:
-    branches: [ "main" ]
+    branches: [ "p5general_0.7.11" ]
   pull_request:
-    branches: [ "main" ]
+    branches: [ "p5general_0.7.11" ]
 #  pull_request_target:
 #    branches: [ "main" ]
   workflow_dispatch:
