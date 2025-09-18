@@ -22,6 +22,7 @@ on:
           - Pico16N
           - Pico19
           - QF
+          - RUYI
 
 env:
   BUILD_TYPE: Release
