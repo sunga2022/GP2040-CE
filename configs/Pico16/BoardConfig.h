@@ -65,6 +65,7 @@
 #define TURBO_ENABLED 1
 #define GPIO_PIN_24 GpioAction::BUTTON_PRESS_TURBO
 
+#define BOARD_USB_ENABLED 1 
 #define USB_PERIPHERAL_PIN_DPLUS 4
 #define USB_PERIPHERAL_PIN_ORDER 1
 
@@ -97,15 +98,18 @@
 #define LEDS_BUTTON_S2   15
 
 #define HAS_I2C_DISPLAY 1
+#define I2C0_ENABLED 0        // 禁用 I2C0
 #define I2C1_ENABLED 1
 #define I2C1_PIN_SDA 26
 #define I2C1_PIN_SCL 27
+
 #define BUTTON_LAYOUT BUTTON_LAYOUT_STICKLESS
 #define BUTTON_LAYOUT_RIGHT BUTTON_LAYOUT_STICKLESSB
 
+
 // Additional Button Support
-#define GPIO_PIN_29 static_cast<GpioAction>(int(GpioAction::BUTTON_PRESS_B1) | int(GpioAction::BUTTON_PRESS_B3))
-#define GPIO_PIN_21 static_cast<GpioAction>(int(GpioAction::BUTTON_PRESS_B2) | int(GpioAction::BUTTON_PRESS_B4))
+#define GPIO_PIN_29 GPIO_MULTI(int(GpioAction::BUTTON_PRESS_B1) | int(GpioAction::BUTTON_PRESS_B3))
+#define GPIO_PIN_21 GPIO_MULTI(int(GpioAction::BUTTON_PRESS_B2) | int(GpioAction::BUTTON_PRESS_B4))
 
  #define BOARD_LED_ENABLED 1
  #define BOARD_LED_TYPE ON_BOARD_LED_MODE_MODE_INDICATOR
