@@ -53,7 +53,7 @@
 #define KEY_BUTTON_R2   HID_KEY_X             // R2     | RT     | ZR      | R2       | 8      | K3     |
 #define KEY_BUTTON_L2   HID_KEY_V             // L2     | LT     | ZL      | L2       | 7      | K4     |
 #define KEY_BUTTON_B3   HID_KEY_B             // B3     | X      | Y       | Square   | 1      | P1     |
-#define KEY_BUTTON_B4   HID_KEY_A      T      // B4     | Y      | X       | Triangle | 4      | P2     |
+#define KEY_BUTTON_B4   HID_KEY_A             // B4     | Y      | X       | Triangle | 4      | P2     |
 #define KEY_BUTTON_R1   HID_KEY_S             // R1     | RB     | R       | R1       | 6      | P3     |
 #define KEY_BUTTON_L1   HID_KEY_C             // L1     | LB     | L       | L1       | 5      | P4     |
 #define KEY_BUTTON_S1   HID_KEY_5             // S1     | Back   | Minus   | Select   | 9      | Coin   |
