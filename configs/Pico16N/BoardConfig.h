@@ -107,6 +107,8 @@
 #define GPIO_PIN_29 static_cast<GpioAction>(int(GpioAction::BUTTON_PRESS_B1) | int(GpioAction::BUTTON_PRESS_B3))
 #define GPIO_PIN_20 static_cast<GpioAction>(int(GpioAction::BUTTON_PRESS_B2) | int(GpioAction::BUTTON_PRESS_B4))
 
+ #define BOARD_LED_ENABLED 1
+ #define BOARD_LED_TYPE ON_BOARD_LED_MODE_MODE_INDICATOR
 
 #define DEFAULT_SPLASH \
 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, \
