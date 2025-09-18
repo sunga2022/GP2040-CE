@@ -105,9 +105,9 @@
 
 // Additional Button Support
 #define GPIO_PIN_29 GpioAction::BUTTON_PRESS_UP
-#define GPIO_PIN_16 GPIO_MULTI(GpioAction::BUTTON_PRESS_B1 | GpioAction::BUTTON_PRESS_B3)
-#define GPIO_PIN_11 GPIO_MULTI(GpioAction::BUTTON_PRESS_B2 | GpioAction::BUTTON_PRESS_B4)
-#define GPIO_PIN_04 GPIO_MULTI(GpioAction::BUTTON_PRESS_R1 | GpioAction::BUTTON_PRESS_L1)
+#define GPIO_PIN_16 static_cast<GpioAction>(int(GpioAction::BUTTON_PRESS_B1) | int(GpioAction::BUTTON_PRESS_B3))
+#define GPIO_PIN_11 static_cast<GpioAction>(int(GpioAction::BUTTON_PRESS_B2) | int(GpioAction::BUTTON_PRESS_B4))
+#define GPIO_PIN_04 static_cast<GpioAction>(int(GpioAction::BUTTON_PRESS_R1) | int(GpioAction::BUTTON_PRESS_R2))
 
  #define BOARD_LED_ENABLED 1
  #define BOARD_LED_TYPE ON_BOARD_LED_MODE_MODE_INDICATOR
