@@ -63,7 +63,7 @@
 #define KEY_BUTTON_FN   HID_KEY_ESC           // Hotkey Function                                        |
 
 #define TURBO_ENABLED 1
-#define GPIO_PIN_23 GpioAction::BUTTON_PRESS_TURBO
+#define GPIO_PIN_16 GpioAction::BUTTON_PRESS_TURBO
 #define TURBO_LED_PIN 15
 
 #define BOARD_USB_ENABLED 1 
@@ -109,6 +109,23 @@
 
  #define BOARD_LED_ENABLED 1
  #define BOARD_LED_TYPE ON_BOARD_LED_MODE_MODE_INDICATOR
+
+#define S2    (1U<<0)
+#define A1    (1U<<1)
+#define LEFT  (1U<<2)
+#define RIGHT (1U<<3)
+#define DOWN  (1U<<4)
+
+#define MODE_LS   0
+#define MODE_RS   1
+#define MODE_DP   2
+
+static inline int combo_mode(uint32_t k) {
+    if ((k & (S2|A1|LEFT))  == (S2|A1|LEFT))  return MODE_LS;
+    if ((k & (S2|A1|RIGHT)) == (S2|A1|RIGHT)) return MODE_RS;
+    if ((k & (S2|A1|DOWN))  == (S2|A1|DOWN))  return MODE_DP;
+    return -1;
+}
 
 #define DEFAULT_SPLASH \
 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, \
