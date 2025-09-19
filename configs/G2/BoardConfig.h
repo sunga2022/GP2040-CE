@@ -34,8 +34,6 @@
 
 // Setting GPIO pins to assigned by add-on
 //
-#define GPIO_PIN_26 GpioAction::ASSIGNED_TO_ADDON
-#define GPIO_PIN_27 GpioAction::ASSIGNED_TO_ADDON
 #define GPIO_PIN_22 GpioAction::ASSIGNED_TO_ADDON
 #define GPIO_PIN_23 GpioAction::ASSIGNED_TO_ADDON
 #define GPIO_PIN_00 GpioAction::ASSIGNED_TO_ADDON
@@ -65,7 +63,7 @@
 #define KEY_BUTTON_FN   HID_KEY_ESC           // Hotkey Function                                        |
 
 #define TURBO_ENABLED 1
-#define GPIO_PIN_23 GpioAction::BUTTON_PRESS_TURBO
+#define GPIO_PIN_16 GpioAction::BUTTON_PRESS_TURBO
 #define TURBO_LED_PIN 15
 
 #define BOARD_USB_ENABLED 1 
@@ -75,12 +73,6 @@
 #define DEFAULT_INPUT_MODE_R1 INPUT_MODE_XBONE
 #define DEFAULT_INPUT_MODE_L1 INPUT_MODE_PS5
 #define DEFAULT_PS5AUTHENTICATION_TYPE INPUT_MODE_AUTH_TYPE_USB
-
-#define ANALOG_ADC1_X_PIN 26   // 左摇杆 X 轴 ADC 输入 GPIO26
-#define ANALOG_ADC1_Y_PIN 27   // 左摇杆 Y 轴 ADC 输入 GPIO27
-
-#define ANALOG_ADC1_MODE 1     // 1 = 左摇杆 (LS)
-
 
 #define BOARD_LEDS_PIN 28
 #define LED_BRIGHTNESS_MAXIMUM 100
