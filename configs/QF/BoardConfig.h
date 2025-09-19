@@ -177,32 +177,27 @@
 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, \
 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00
 
-// =======================================
 // HOTKEYS: 切换摇杆模式
 // START + A1 + LEFT  -> 左摇杆
 // START + A1 + RIGHT -> 右摇杆
 // START + A1 + DOWN  -> DPAD摇杆
-// =======================================
 
-// HOTKEY 00: START + A1 + LEFT -> 左摇杆
-#define HOTKEY_00_BUTTONS_MASK (GAMEPAD_MASK_START | GAMEPAD_MASK_A1)
-#define HOTKEY_00_DPAD_MASK    GAMEPAD_MASK_LEFT
-#define HOTKEY_00_AUX_MASK     0
-#define HOTKEY_00_ACTION       ACTION_SET_LEFT_STICK  // 固件内部动作
+#define HOTKEY_00_AUX_MASK 0
+#define HOTKEY_00_BUTTONS_MASK (256 | 2)   // START + A1
+#define HOTKEY_00_DPAD_MASK    16           // LEFT
+#define HOTKEY_00_ACTION       1            // ACTION_SET_LEFT_STICK
 
-// HOTKEY 01: START + A1 + RIGHT -> 右摇杆
-#define HOTKEY_01_BUTTONS_MASK (GAMEPAD_MASK_START | GAMEPAD_MASK_A1)
-#define HOTKEY_01_DPAD_MASK    GAMEPAD_MASK_RIGHT
-#define HOTKEY_01_AUX_MASK     0
-#define HOTKEY_01_ACTION       ACTION_SET_RIGHT_STICK  // 固件内部动作
+#define HOTKEY_01_AUX_MASK 0
+#define HOTKEY_01_BUTTONS_MASK (256 | 2)   // START + A1
+#define HOTKEY_01_DPAD_MASK    32           // RIGHT
+#define HOTKEY_01_ACTION       2            // ACTION_SET_RIGHT_STICK
 
-// HOTKEY 02: START + A1 + DOWN -> DPAD摇杆
-#define HOTKEY_02_BUTTONS_MASK (GAMEPAD_MASK_START | GAMEPAD_MASK_A1)
-#define HOTKEY_02_DPAD_MASK    GAMEPAD_MASK_DOWN
-#define HOTKEY_02_AUX_MASK     0
-#define HOTKEY_02_ACTION       ACTION_SET_STICK       // DPAD摇杆映射到普通摇杆
+#define HOTKEY_02_AUX_MASK 0
+#define HOTKEY_02_BUTTONS_MASK (256 | 2)   // START + A1
+#define HOTKEY_02_DPAD_MASK    64           // DOWN
+#define HOTKEY_02_ACTION       3            // ACTION_SET_DPAD_STICK
 
-// 其他热键保持空
+// 其余热键保持空
 #define HOTKEY_03_AUX_MASK 0
 #define HOTKEY_03_BUTTONS_MASK 0
 #define HOTKEY_03_DPAD_MASK 0
