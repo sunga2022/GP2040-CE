@@ -182,8 +182,8 @@
 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00
 
 // Hotkey Function 定义在 GPIO24
-#define GPIO_PIN_24 GpioAction::BUTTON_FN
-#define KEY_BUTTON_FN 24  // Hotkey Function
+#define GPIO_PIN_24 24      // Hotkey Function
+#define KEY_BUTTON_FN 24    // Hotkey Function
 
 // HOTKEY 定义
 #define HOTKEY_00_AUX_MASK 0
@@ -192,7 +192,7 @@
 #define HOTKEY_00_ACTION 1  // 反转X轴
 
 #define HOTKEY_01_AUX_MASK 0
-#define HOTKEY_01_BUTTONS_MASK (1024 | 8 | 64)  // FN + UP + DOWN
+#define HOTKEY_01_BUTTONS_MASK (1024 | 8 | 64)   // FN + UP + DOWN
 #define HOTKEY_01_DPAD_MASK 0
 #define HOTKEY_01_ACTION 2  // 反转Y轴
 
