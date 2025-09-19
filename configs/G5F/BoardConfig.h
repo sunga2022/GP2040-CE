@@ -103,14 +103,9 @@
  #define I2C0_PIN_SCL 1
  #define SPLASH_MODE SPLASH_MODE_STATIC
  #define SPLASH_DURATION 3000
- #define BUTTON_LAYOUT BUTTON_LAYOUT_JOYSTICK
- #define BUTTON_LAYOUT_RIGHT BUTTON_LAYOUT_STICKLESSB
-
-// Additional Button Support
-#define GPIO_PIN_29 static_cast<GpioAction>(int(GpioAction::BUTTON_PRESS_B1) | int(GpioAction::BUTTON_PRESS_B3))
-#define GPIO_PIN_16 static_cast<GpioAction>(int(GpioAction::BUTTON_PRESS_B2) | int(GpioAction::BUTTON_PRESS_B4))
-#define GPIO_PIN_11 static_cast<GpioAction>(int(GpioAction::BUTTON_PRESS_R1) | int(GpioAction::BUTTON_PRESS_R2))
-#define GPIO_PIN_04 static_cast<GpioAction>(int(GpioAction::BUTTON_PRESS_L1) | int(GpioAction::BUTTON_PRESS_L2))
+ 
+ #define BUTTON_LAYOUT BUTTON_LAYOUT_BOARD_DEFINED_A
+ #define BUTTON_LAYOUT_RIGHT BUTTON_LAYOUT_BOARD_DEFINED_B
 
  #define BOARD_LED_ENABLED 1
  #define BOARD_LED_TYPE ON_BOARD_LED_MODE_MODE_INDICATOR
