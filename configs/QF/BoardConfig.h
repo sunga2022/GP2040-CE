@@ -111,23 +111,6 @@
  #define BOARD_LED_ENABLED 1
  #define BOARD_LED_TYPE ON_BOARD_LED_MODE_MODE_INDICATOR
 
-#define S2    (1U<<0)
-#define A1    (1U<<1)
-#define LEFT  (1U<<2)
-#define RIGHT (1U<<3)
-#define DOWN  (1U<<4)
-
-#define MODE_LS   0
-#define MODE_RS   1
-#define MODE_DP   2
-
-static inline int combo_mode(uint32_t k) {
-    if ((k & (S2|A1|LEFT))  == (S2|A1|LEFT))  return MODE_LS;
-    if ((k & (S2|A1|RIGHT)) == (S2|A1|RIGHT)) return MODE_RS;
-    if ((k & (S2|A1|DOWN))  == (S2|A1|DOWN))  return MODE_DP;
-    return -1;
-}
-
 #define DEFAULT_SPLASH \
 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, \
 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, \
@@ -193,5 +176,57 @@ static inline int combo_mode(uint32_t k) {
 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, \
 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, \
 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00
+
+// =======================================
+// HOTKEYS: 切换摇杆模式
+// START + A1 + LEFT  -> 左摇杆
+// START + A1 + RIGHT -> 右摇杆
+// START + A1 + DOWN  -> DPAD摇杆
+// =======================================
+
+// HOTKEY 00: START + A1 + LEFT -> 左摇杆
+#define HOTKEY_00_BUTTONS_MASK (GAMEPAD_MASK_START | GAMEPAD_MASK_A1)
+#define HOTKEY_00_DPAD_MASK    DPAD_MASK_LEFT
+#define HOTKEY_00_AUX_MASK     0
+#define HOTKEY_00_ACTION       ACTION_SET_LEFT_STICK  // 固件内部动作
+
+// HOTKEY 01: START + A1 + RIGHT -> 右摇杆
+#define HOTKEY_01_BUTTONS_MASK (GAMEPAD_MASK_START | GAMEPAD_MASK_A1)
+#define HOTKEY_01_DPAD_MASK    DPAD_MASK_RIGHT
+#define HOTKEY_01_AUX_MASK     0
+#define HOTKEY_01_ACTION       ACTION_SET_RIGHT_STICK  // 固件内部动作
+
+// HOTKEY 02: START + A1 + DOWN -> DPAD摇杆
+#define HOTKEY_02_BUTTONS_MASK (GAMEPAD_MASK_START | GAMEPAD_MASK_A1)
+#define HOTKEY_02_DPAD_MASK    DPAD_MASK_DOWN
+#define HOTKEY_02_AUX_MASK     0
+#define HOTKEY_02_ACTION       ACTION_SET_DPAD_STICK   // 固件内部动作
+
+// 其他热键保持空
+#define HOTKEY_03_AUX_MASK 0
+#define HOTKEY_03_BUTTONS_MASK 0
+#define HOTKEY_03_DPAD_MASK 0
+#define HOTKEY_03_ACTION 0
+
+#define HOTKEY_04_AUX_MASK 0
+#define HOTKEY_04_BUTTONS_MASK 0
+#define HOTKEY_04_DPAD_MASK 0
+#define HOTKEY_04_ACTION 0
+
+#define HOTKEY_05_AUX_MASK 0
+#define HOTKEY_05_BUTTONS_MASK 0
+#define HOTKEY_05_DPAD_MASK 0
+#define HOTKEY_05_ACTION 0
+
+#define HOTKEY_06_AUX_MASK 0
+#define HOTKEY_06_BUTTONS_MASK 0
+#define HOTKEY_06_DPAD_MASK 0
+#define HOTKEY_06_ACTION 0
+
+#define HOTKEY_07_AUX_MASK 0
+#define HOTKEY_07_BUTTONS_MASK 0
+#define HOTKEY_07_DPAD_MASK 0
+#define HOTKEY_07_ACTION 0
+
 
 #endif
