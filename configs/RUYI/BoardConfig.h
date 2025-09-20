@@ -97,12 +97,12 @@
 #define LEDS_BUTTON_S2   15
 
  #define ANALOG_INPUT_ENABLED        1
- #define ANALOG_ADC_1_VRX            26
- #define ANALOG_ADC_1_VRY            27
+ #define ANALOG_ADC_1_VRX            28
+ #define ANALOG_ADC_1_VRY            29
  #define ANALOG_ADC_1_MODE           DPAD_MODE_LEFT_ANALOG
  #define ANALOG_ADC_1_INVERT         INVERT_XY
- #define ANALOG_ADC_2_VRX            28
- #define ANALOG_ADC_2_VRY            29
+ #define ANALOG_ADC_2_VRX            26
+ #define ANALOG_ADC_2_VRY            27
  #define ANALOG_ADC_2_MODE           DPAD_MODE_RIGHT_ANALOG
  #define ANALOG_ADC_2_INVERT         INVERT_XY
  #define DEFAULT_INNER_DEADZONE      10
