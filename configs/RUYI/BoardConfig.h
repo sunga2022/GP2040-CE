@@ -112,16 +112,6 @@
 #define DEFAULT_OUTER_DEADZONE      95  // 改为95，与JSON一致
 #define AUTO_CALIBRATE_ENABLED      1
 
- #define HAS_I2C_DISPLAY 1
- #define I2C0_ENABLED 1
- #define I2C0_PIN_SDA 20
- #define I2C0_PIN_SCL 21
- #define SPLASH_MODE SPLASH_MODE_STATIC
- #define SPLASH_DURATION 3000
- 
- #define BUTTON_LAYOUT BUTTON_LAYOUT_BOARD_DEFINED_A
- #define BUTTON_LAYOUT_RIGHT BUTTON_LAYOUT_BOARD_DEFINED_B
-
  #define BOARD_LED_ENABLED 1
  #define BOARD_LED_TYPE ON_BOARD_LED_MODE_MODE_INDICATOR
 
@@ -191,16 +181,6 @@
 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, \
 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00
 
-#define HOTKEY_00_AUX_MASK AUX_MASK_FUNCTION
-#define HOTKEY_00_BUTTONS_MASK (GAMEPAD_MASK_DL | GAMEPAD_MASK_DR)  // FN + LEFT + RIGHT
-#define HOTKEY_00_DPAD_MASK 0
-#define HOTKEY_00_ACTION 9  // INVERT X AXIS
-
-#define HOTKEY_01_AUX_MASK AUX_MASK_FUNCTION  
-#define HOTKEY_01_BUTTONS_MASK (GAMEPAD_MASK_DU | GAMEPAD_MASK_DD)   // FN + UP + DOWN
-#define HOTKEY_01_DPAD_MASK 0
-#define HOTKEY_01_ACTION 10 // INVERT Y AXIS
-
 #define HOTKEY_02_AUX_MASK AUX_MASK_FUNCTION
 #define HOTKEY_02_BUTTONS_MASK (GAMEPAD_MASK_S1 | GAMEPAD_MASK_DR)   // FN + S1 + RIGHT
 #define HOTKEY_02_DPAD_MASK 0
@@ -220,5 +200,50 @@
 #define HOTKEY_05_BUTTONS_MASK (GAMEPAD_MASK_S1 | GAMEPAD_MASK_DD)   // FN + S1 + DOWN
 #define HOTKEY_05_DPAD_MASK 0
 #define HOTKEY_05_ACTION 7  // SOCD NEUTRAL
+
+// 显示配置
+#define HAS_I2C_DISPLAY 1
+#define I2C0_ENABLED 1
+#define I2C0_PIN_SDA 20
+#define I2C0_PIN_SCL 21
+#define I2C_BLOCK i2c0
+#define I2C_SPEED 400000
+
+// 按钮布局配置（与你的JSON完全一致）
+#define BUTTON_LAYOUT 34           // BUTTON_LAYOUT_STICKLESS
+#define BUTTON_LAYOUT_RIGHT 38     // BUTTON_LAYOUT_STICKLESSB
+
+// 启动画面配置
+#define SPLASH_MODE SPLASH_MODE_STATIC
+#define SPLASH_CHOICE SPLASH_CHOICE_MAIN
+#define SPLASH_DURATION 4000       // 4秒
+
+// 显示方向设置
+#define DISPLAY_FLIP 0
+#define DISPLAY_INVERT 0
+
+// I2C地址设置
+#define I2C_DISPLAY_ADDRESS 0x3C
+
+// 自定义布局选项（与你的JSON完全一致）
+#define BUTTON_LAYOUT_CUSTOM_OPTIONS \
+    .params = { \
+        .layout = 1, \
+        .startX = 8, \
+        .startY = 28, \
+        .buttonRadius = 8, \
+        .buttonPadding = 2 \
+    }, \
+    .paramsRight = { \
+        .layout = 1, \
+        .startX = 8, \
+        .startY = 28, \
+        .buttonRadius = 8, \
+        .buttonPadding = 2 \
+    }
+
+// 显示保护设置
+#define DISPLAY_SAVER_TIMEOUT 0
+#define TURN_OFF_WHEN_SUSPENDED 0
 
 #endif
