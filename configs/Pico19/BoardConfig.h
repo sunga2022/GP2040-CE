@@ -31,6 +31,7 @@
 #define GPIO_PIN_13 GpioAction::BUTTON_PRESS_R3     // R3     | RS     | RS      | R3       | 12     | RS     |
 #define GPIO_PIN_22 GpioAction::BUTTON_PRESS_A1     // A1     | Guide  | Home    | PS       | 13     | ~      |
 #define GPIO_PIN_26 GpioAction::BUTTON_PRESS_A2     // A2     | ~      | Capture | ~        | 14     | ~      |
+#define GPIO_PIN_24 GpioAction::BUTTON_PRESS_FN     // Hotkey Function
 
 // Setting GPIO pins to assigned by add-on
 //
@@ -181,53 +182,49 @@
 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, \
 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00
 
-// Hotkey Function 定义在 GPIO24
-#define GPIO_PIN_24 24      // Hotkey Function
-#define KEY_BUTTON_FN 24    // Hotkey Function
-
-// HOTKEY 定义
+// 使用 GAMEPAD_MASK_FN 来表示FN键的组合
 #define HOTKEY_00_AUX_MASK 0
-#define HOTKEY_00_BUTTONS_MASK (1024 | 16 | 32)  // FN + LEFT + RIGHT
+#define HOTKEY_00_BUTTONS_MASK (GAMEPAD_MASK_FN | GAMEPAD_MASK_LEFT | GAMEPAD_MASK_RIGHT)  // FN + LEFT + RIGHT
 #define HOTKEY_00_DPAD_MASK 0
 #define HOTKEY_00_ACTION 1  // 反转X轴
 
 #define HOTKEY_01_AUX_MASK 0
-#define HOTKEY_01_BUTTONS_MASK (1024 | 8 | 64)   // FN + UP + DOWN
+#define HOTKEY_01_BUTTONS_MASK (GAMEPAD_MASK_FN | GAMEPAD_MASK_UP | GAMEPAD_MASK_DOWN)     // FN + UP + DOWN
 #define HOTKEY_01_DPAD_MASK 0
 #define HOTKEY_01_ACTION 2  // 反转Y轴
 
 #define HOTKEY_02_AUX_MASK 0
-#define HOTKEY_02_BUTTONS_MASK (1024 | 128 | 32) // FN + S1 + RIGHT
+#define HOTKEY_02_BUTTONS_MASK (GAMEPAD_MASK_FN | GAMEPAD_MASK_S1 | GAMEPAD_MASK_RIGHT)    // FN + S1 + RIGHT
 #define HOTKEY_02_DPAD_MASK 0
 #define HOTKEY_02_ACTION 3  // SOCD 先输入优先
 
 #define HOTKEY_03_AUX_MASK 0
-#define HOTKEY_03_BUTTONS_MASK (1024 | 128 | 16) // FN + S1 + LEFT
+#define HOTKEY_03_BUTTONS_MASK (GAMEPAD_MASK_FN | GAMEPAD_MASK_S1 | GAMEPAD_MASK_LEFT)     // FN + S1 + LEFT
 #define HOTKEY_03_DPAD_MASK 0
 #define HOTKEY_03_ACTION 4  // SOCD 后输入优先
 
 #define HOTKEY_04_AUX_MASK 0
-#define HOTKEY_04_BUTTONS_MASK (1024 | 128 | 64) // FN + S1 + DOWN
+#define HOTKEY_04_BUTTONS_MASK (GAMEPAD_MASK_FN | GAMEPAD_MASK_S1 | GAMEPAD_MASK_DOWN)     // FN + S1 + DOWN
 #define HOTKEY_04_DPAD_MASK 0
 #define HOTKEY_04_ACTION 5  // SOCD 回中
 
 #define HOTKEY_05_AUX_MASK 0
-#define HOTKEY_05_BUTTONS_MASK (1024 | 128 | 8)  // FN + S1 + UP
+#define HOTKEY_05_BUTTONS_MASK (GAMEPAD_MASK_FN | GAMEPAD_MASK_S1 | GAMEPAD_MASK_UP)       // FN + S1 + UP
 #define HOTKEY_05_DPAD_MASK 0
 #define HOTKEY_05_ACTION 6  // SOCD 上优先
 
 #define HOTKEY_06_AUX_MASK 0
-#define HOTKEY_06_BUTTONS_MASK (1024 | 256 | 32) // FN + S2 + RIGHT
+#define HOTKEY_06_BUTTONS_MASK (GAMEPAD_MASK_FN | GAMEPAD_MASK_S2 | GAMEPAD_MASK_RIGHT)    // FN + S2 + RIGHT
 #define HOTKEY_06_DPAD_MASK 0
 #define HOTKEY_06_ACTION 7  // 右摇杆模式
 
 #define HOTKEY_07_AUX_MASK 0
-#define HOTKEY_07_BUTTONS_MASK (1024 | 256 | 16) // FN + S2 + LEFT
+#define HOTKEY_07_BUTTONS_MASK (GAMEPAD_MASK_FN | GAMEPAD_MASK_S2 | GAMEPAD_MASK_LEFT)     // FN + S2 + LEFT
 #define HOTKEY_07_DPAD_MASK 0
 #define HOTKEY_07_ACTION 8  // 左摇杆模式
 
 #define HOTKEY_08_AUX_MASK 0
-#define HOTKEY_08_BUTTONS_MASK (1024 | 256 | 8)  // FN + S2 + UP
+#define HOTKEY_08_BUTTONS_MASK (GAMEPAD_MASK_FN | GAMEPAD_MASK_S2 | GAMEPAD_MASK_UP)       // FN + S2 + UP
 #define HOTKEY_08_DPAD_MASK 0
 #define HOTKEY_08_ACTION 9  // 十字键模式
 
