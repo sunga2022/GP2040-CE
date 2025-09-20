@@ -93,21 +93,24 @@
 #define LEDS_BUTTON_L2   11
 #define LEDS_BUTTON_R3   12
 #define LEDS_BUTTON_L3   13
-#define LEDS_BUTTON_A2   14
-#define LEDS_BUTTON_S2   15
+#define LEDS_BUTTON_S2   14
+#define LEDS_BUTTON_S1   15
+#define LEDS_BUTTON_A2   16
 
- #define ANALOG_INPUT_ENABLED        1
- #define ANALOG_ADC_1_VRX            29
- #define ANALOG_ADC_1_VRY            28
- #define ANALOG_ADC_1_MODE           DPAD_MODE_LEFT_ANALOG
- #define ANALOG_ADC_1_INVERT         INVERT_XY
- #define ANALOG_ADC_2_VRX            27
- #define ANALOG_ADC_2_VRY            26
- #define ANALOG_ADC_2_MODE           DPAD_MODE_RIGHT_ANALOG
- #define ANALOG_ADC_2_INVERT         INVERT_XY
- #define DEFAULT_INNER_DEADZONE      10
- #define DEFAULT_OUTER_DEADZONE      75
- #define AUTO_CALIBRATE_ENABLED      1
+#define ANALOG_INPUT_ENABLED        1
+#define ANALOG_ADC_1_VRX            28
+#define ANALOG_ADC_1_VRY            29  
+#define ANALOG_ADC_1_MODE           DPAD_MODE_LEFT_ANALOG
+#define ANALOG_ADC_1_INVERT         INVERT_NONE  // JSON中是0，对应INVERT_NONE
+
+#define ANALOG_ADC_2_VRX            26
+#define ANALOG_ADC_2_VRY            27
+#define ANALOG_ADC_2_MODE           DPAD_MODE_RIGHT_ANALOG  
+#define ANALOG_ADC_2_INVERT         INVERT_NONE  // JSON中是0，对应INVERT_NONE
+
+#define DEFAULT_INNER_DEADZONE      5   // 改为5，与JSON一致
+#define DEFAULT_OUTER_DEADZONE      95  // 改为95，与JSON一致
+#define AUTO_CALIBRATE_ENABLED      1
 
  #define HAS_I2C_DISPLAY 1
  #define I2C0_ENABLED 1
