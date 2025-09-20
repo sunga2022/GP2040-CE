@@ -209,14 +209,14 @@
 #define I2C_BLOCK i2c0
 #define I2C_SPEED 400000
 
-// 按钮布局配置（与你的JSON完全一致）
-#define BUTTON_LAYOUT 34           // BUTTON_LAYOUT_STICKLESS
-#define BUTTON_LAYOUT_RIGHT 38     // BUTTON_LAYOUT_STICKLESSB
+// 按钮布局配置 - 使用正确的枚举常量
+#define BUTTON_LAYOUT BUTTON_LAYOUT_STICKLESS
+#define BUTTON_LAYOUT_RIGHT BUTTON_LAYOUT_STICKLESSB
 
 // 启动画面配置
 #define SPLASH_MODE SPLASH_MODE_STATIC
 #define SPLASH_CHOICE SPLASH_CHOICE_MAIN
-#define SPLASH_DURATION 4000       // 4秒
+#define SPLASH_DURATION 4000
 
 // 显示方向设置
 #define DISPLAY_FLIP 0
@@ -224,23 +224,6 @@
 
 // I2C地址设置
 #define I2C_DISPLAY_ADDRESS 0x3C
-
-// 自定义布局选项（与你的JSON完全一致）
-#define BUTTON_LAYOUT_CUSTOM_OPTIONS \
-    .params = { \
-        .layout = 1, \
-        .startX = 8, \
-        .startY = 28, \
-        .buttonRadius = 8, \
-        .buttonPadding = 2 \
-    }, \
-    .paramsRight = { \
-        .layout = 1, \
-        .startX = 8, \
-        .startY = 28, \
-        .buttonRadius = 8, \
-        .buttonPadding = 2 \
-    }
 
 // 显示保护设置
 #define DISPLAY_SAVER_TIMEOUT 0
