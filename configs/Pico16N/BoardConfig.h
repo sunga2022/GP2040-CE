@@ -74,13 +74,12 @@
 #define DEFAULT_INPUT_MODE_L1 INPUT_MODE_PS5
 #define DEFAULT_PS5AUTHENTICATION_TYPE INPUT_MODE_AUTH_TYPE_USB
 
-// ======== 在这里添加多模式配置 ========
-#define DEFAULT_INPUT_MODE_B1 INPUT_MODE_SWITCH      // 模式1: Nintendo Switch (默认)
-#define DEFAULT_INPUT_MODE_B4 INPUT_MODE_PS4         // 模式3: PS4 (文件认证)
-#define DEFAULT_INPUT_MODE_L2 INPUT_MODE_SWITCH_PRO  // 模式4: Nintendo Switch Pro
+// 多模式配置
+#define DEFAULT_INPUT_MODE_B1 INPUT_MODE_SWITCH       // 模式1: Nintendo Switch (默认)
+#define DEFAULT_INPUT_MODE_B4 INPUT_MODE_PS4          // 模式3: PS4 (文件认证)
+#define DEFAULT_INPUT_MODE_L2 INPUT_MODE_SWITCH_PRO   // 模式4: Nintendo Switch Pro
 
-#define DEFAULT_PS4AUTHENTICATION_TYPE INPUT_MODE_AUTH_TYPE_FILE   // PS4用文件认证
-// ======== 添加结束 ========
+#define DEFAULT_PS4AUTHENTICATION_TYPE INPUT_MODE_PS4_AUTH_TYPE_FILE   // PS4用文件认证
 
 #define BOARD_LEDS_PIN 28
 #define LED_BRIGHTNESS_MAXIMUM 100
