@@ -115,8 +115,13 @@
 #define BUTTON_LAYOUT_RIGHT BUTTON_LAYOUT_STICKLESSB // 右边8个按钮
 
 // Additional Button Support
-#define GPIO_PIN_20 static_cast<GpioAction>(int(GpioAction::BUTTON_PRESS_B1) | int(GpioAction::BUTTON_PRESS_B3))
-#define GPIO_PIN_29 static_cast<GpioAction>(int(GpioAction::BUTTON_PRESS_B2) | int(GpioAction::BUTTON_PRESS_B4))
+// 引脚21的配置 - 按下时触发 B2 和 B4
+#define GPIO_PIN_20_ACTION 40
+#define GPIO_PIN_20_CUSTOM_BUTTON_MASK 10  // B2 (2) + B4 (8) = 10
+
+// 引脚29的配置 - 按下时触发 B1 和 B3  
+#define GPIO_PIN_29_ACTION 40
+#define GPIO_PIN_29_CUSTOM_BUTTON_MASK 5   // B1 (1) + B3 (4) = 5
 
  #define BOARD_LED_ENABLED 1
  #define BOARD_LED_TYPE ON_BOARD_LED_MODE_MODE_INDICATOR
