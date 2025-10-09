@@ -9,7 +9,7 @@
 #include "enums.pb.h"
 #include "class/hid/hid.h"
 
-#define BOARD_CONFIG_LABEL "14PNEW"
+#define BOARD_CONFIG_LABEL "17P"
 
 // Main pin mapping Configuration
 //                                                  // GP2040 | Xinput | Switch  | PS3/4/5  | Dinput | Arcade |
@@ -99,6 +99,10 @@
 #define LEDS_BUTTON_B2   9
 #define LEDS_BUTTON_R2   10
 #define LEDS_BUTTON_L2   11
+#define LEDS_BUTTON_R3   12
+#define LEDS_BUTTON_L3   13
+#define LEDS_BUTTON_A2   14
+#define LEDS_BUTTON_S2   15
 
  #define HAS_I2C_DISPLAY 1
  #define I2C0_ENABLED 1
