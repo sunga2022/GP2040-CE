@@ -23,6 +23,7 @@ on:
           - Pico19
           - QF
           - RUYI
+          - 14PNEW
 
 env:
   BUILD_TYPE: Release
