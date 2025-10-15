@@ -151,11 +151,11 @@
 #endif
 
 #ifndef DEFAULT_USB_DESC_PRODUCT
-   #define DEFAULT_USB_DESC_PRODUCT "GP2040-CE (Custom)"
+   #define DEFAULT_USB_DESC_PRODUCT "Sunga GamePAD (Custom)"
 #endif
 
 #ifndef DEFAULT_USB_DESC_MANUFACTURER
-   #define DEFAULT_USB_DESC_MANUFACTURER "Open Stick Community"
+   #define DEFAULT_USB_DESC_MANUFACTURER "SUNGA Electronics Co., Ltd"
 #endif
 
 #ifndef DEFAULT_USB_DESC_VERSION
