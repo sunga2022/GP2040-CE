@@ -24,6 +24,9 @@ on:
           - QF
           - RUYI
           - 14PNEW
+          - 17P
+          - 14POLD
+          - 13P
 
 env:
   BUILD_TYPE: Release
