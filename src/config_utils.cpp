@@ -1298,7 +1298,7 @@ void gpioMappingsMigrationCore(Config& config)
     }
 
     // Assign all potential board config pins
-    GpioAction boardConfig[NUM_BANK0_GPIOS] = {GPIO_PIN_00, GPIO_PIN_01, GPIO_PIN_02,
+    GpioAction boardConfig[] = {GPIO_PIN_00, GPIO_PIN_01, GPIO_PIN_02,
 											   GPIO_PIN_03, GPIO_PIN_04, GPIO_PIN_05,
                                                GPIO_PIN_06, GPIO_PIN_07, GPIO_PIN_08,
                                                GPIO_PIN_09, GPIO_PIN_10, GPIO_PIN_11,
