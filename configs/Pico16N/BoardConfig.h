@@ -113,13 +113,12 @@
 #define BUTTON_LAYOUT BUTTON_LAYOUT_STICKLESS        // 左边4个按钮
 #define BUTTON_LAYOUT_RIGHT BUTTON_LAYOUT_STICKLESSB // 右边8个按钮
 
-// Additional Button Support
-// 引脚21的配置 - 按下时触发 B2 和 B4
-#define GPIO_PIN_20_ACTION 40
+// 引脚20 - 自定义按钮组合 (B2 + B4)
+#define GPIO_PIN_20 GpioAction::CUSTOM_BUTTON_COMBO
 #define GPIO_PIN_20_CUSTOM_BUTTON_MASK 10  // B2 (2) + B4 (8) = 10
 
-// 引脚29的配置 - 按下时触发 B1 和 B3  
-#define GPIO_PIN_29_ACTION 40
+// 引脚29 - 自定义按钮组合 (B1 + B3)  
+#define GPIO_PIN_29 GpioAction::CUSTOM_BUTTON_COMBO
 #define GPIO_PIN_29_CUSTOM_BUTTON_MASK 5   // B1 (1) + B3 (4) = 5
 
  #define BOARD_LED_ENABLED 1
@@ -230,13 +229,13 @@
 #define HOTKEY_07_AUX_MASK AUX_MASK_FUNCTION
 #define HOTKEY_07_BUTTONS_MASK (GAMEPAD_MASK_DL | GAMEPAD_MASK_DR)
 #define HOTKEY_07_DPAD_MASK 0
-#define HOTKEY_07_ACTION 4  // 反转X轴
+#define HOTKEY_07_ACTION 18  // 反转X轴
 
 // FN + UP + DOWN = 反转Y轴  
 #define HOTKEY_08_AUX_MASK AUX_MASK_FUNCTION
 #define HOTKEY_08_BUTTONS_MASK (GAMEPAD_MASK_DU | GAMEPAD_MASK_DD)
 #define HOTKEY_08_DPAD_MASK 0
-#define HOTKEY_08_ACTION 5  // 反转Y轴
+#define HOTKEY_08_ACTION 19  // 反转Y轴
 
 #define HOTKEY_09_AUX_MASK 0
 #define HOTKEY_09_BUTTONS_MASK 0
