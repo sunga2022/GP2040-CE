@@ -7,7 +7,7 @@
 
 #define P5GENERAL_KEEPALIVE_US                          5000
 
-#define P5GENERAL_DRIVER_PRINTF_ENABLE                  0
+#define P5GENERAL_DRIVER_PRINTF_ENABLE                  0       // GP0 as UART0_TX
 #if P5GENERAL_DRIVER_PRINTF_ENABLE
 #   define P5DRPINTF_INIT(...)                          stdio_init_all(__VA_ARGS__)
 #   define P5DRPINTF(...)                               printf(__VA_ARGS__)
@@ -46,6 +46,7 @@ void P5GeneralDriver::initialize() {
     gamepad->auxState.sensors.touchpad[1].y = P5GENERAL_TP_Y_MAX/2;
     
     touchCounter = 0;
+    diff_report_repeat = 0;
 
     p5GeneralReport = {
         .report_id = 0x01,
@@ -111,7 +112,7 @@ bool P5GeneralDriver::process(Gamepad * gamepad) {
     }
 
     if (p5GeneralAuthData->hash_ready) {
-        if (tud_hid_ready() && tud_hid_report(0, p5GeneralAuthData->hash_buffer, sizeof(p5GeneralAuthData->hash_buffer)) == true ) {
+        if (tud_hid_ready() && tud_hid_report(0, p5GeneralAuthData->hash_finish_buffer, sizeof(p5GeneralAuthData->hash_finish_buffer)) == true ) {
             last_report_us = to_us_since_boot(get_absolute_time());
             p5GeneralAuthData->hash_ready = false;
         } else {
@@ -227,7 +228,13 @@ bool P5GeneralDriver::process(Gamepad * gamepad) {
 
     if (memcmp(&p5GeneralReport_last, &p5GeneralReport, sizeof(p5GeneralReport))) {
         memcpy(&p5GeneralReport_last, &p5GeneralReport, sizeof(p5GeneralReport));
-        memcpy(p5GeneralAuthData->hash_buffer, &p5GeneralReport, sizeof(p5GeneralReport));
+        memcpy(p5GeneralAuthData->hash_pending_buffer, &p5GeneralReport, sizeof(p5GeneralReport));
+        p5GeneralAuthData->hash_pending = true;
+        diff_report_repeat = 4;
+        return true;
+    } else if (diff_report_repeat) {
+        diff_report_repeat--;
+        memcpy(p5GeneralAuthData->hash_pending_buffer, &p5GeneralReport, sizeof(p5GeneralReport));
         p5GeneralAuthData->hash_pending = true;
         return true;
     } else {

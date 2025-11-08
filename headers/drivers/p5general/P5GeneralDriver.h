@@ -47,6 +47,7 @@ private:
     P5GeneralAuthData * p5GeneralAuthData;
     bool pointOneTouched = false;
     bool pointTwoTouched = false;
+    uint8_t diff_report_repeat;
     uint8_t touchCounter;
 };
 

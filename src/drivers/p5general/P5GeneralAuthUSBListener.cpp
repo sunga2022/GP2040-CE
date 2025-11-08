@@ -8,7 +8,7 @@
 
 #include <iostream>
 
-#define P5GENERAL_LISTENER_PRINTF_ENABLE                0
+#define P5GENERAL_LISTENER_PRINTF_ENABLE                0       // GP0 as UART0_TX
 #if P5GENERAL_LISTENER_PRINTF_ENABLE
 #   define P5LRPINTF_INIT(...)                          stdio_init_all(__VA_ARGS__)
 #   define P5LRPINTF(...)                               printf(__VA_ARGS__)
@@ -19,7 +19,7 @@
 
 void P5GeneralAuthUSBListener::setup() {
     P5LRPINTF_INIT();
-    P5LRPINTF("P5L:setup\n");
+    P5LRPINTF("P5L:setup.\n");
 
     ps_dev_addr = 0xFF;
     ps_instance = 0xFF;
@@ -35,8 +35,8 @@ void P5GeneralAuthUSBListener::process() {
     if ( p5GeneralAuthData == nullptr )
         return;
 
-    if (p5GeneralAuthData->hash_pending) {
-        tuh_hid_send_report(ps_dev_addr, ps_instance, 0, p5GeneralAuthData->hash_buffer, 64);
+    if (p5GeneralAuthData->hash_pending && tuh_hid_send_ready(ps_dev_addr, ps_instance)) {
+        tuh_hid_send_report(ps_dev_addr, ps_instance, 0, p5GeneralAuthData->hash_pending_buffer, 64);
         p5GeneralAuthData->hash_pending = false;
     }
 
@@ -114,7 +114,7 @@ void P5GeneralAuthUSBListener::unmount(uint8_t dev_addr) {
 
 void P5GeneralAuthUSBListener::report_received(uint8_t dev_addr, uint8_t instance, uint8_t const* report, uint16_t len) {
     if (!p5GeneralAuthData->hash_ready) {
-        memcpy(p5GeneralAuthData->hash_buffer, report, sizeof(p5GeneralAuthData->hash_buffer));
+        memcpy(p5GeneralAuthData->hash_finish_buffer, report, sizeof(p5GeneralAuthData->hash_finish_buffer));
         p5GeneralAuthData->hash_ready = true;
     }
 }

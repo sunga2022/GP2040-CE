@@ -15,7 +15,8 @@ typedef enum {
 } P5GeneralGPAuthState;
 
 typedef struct {
-    uint8_t hash_buffer[64];
+    uint8_t hash_pending_buffer[64];
+    uint8_t hash_finish_buffer[64];
 
     uint8_t auth_buffer[64];
 
