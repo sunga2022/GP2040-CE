@@ -19,7 +19,7 @@
 
 void P5GeneralAuthUSBListener::setup() {
     P5LRPINTF_INIT();
-    P5LRPINTF("P5L:setup.\n");
+    P5LRPINTF("P5L:setup\n");
 
     ps_dev_addr = 0xFF;
     ps_instance = 0xFF;
