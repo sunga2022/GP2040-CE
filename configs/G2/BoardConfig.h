@@ -13,10 +13,17 @@
 
 // Main pin mapping Configuration
 //                                                  // GP2040 | Xinput | Switch  | PS3/4/5  | Dinput | Arcade |
+<<<<<<< HEAD
 #define GPIO_PIN_13 GpioAction::BUTTON_PRESS_UP     // UP     | UP     | UP      | UP       | UP     | UP     |
 #define GPIO_PIN_14 GpioAction::BUTTON_PRESS_DOWN   // DOWN   | DOWN   | DOWN    | DOWN     | DOWN   | DOWN   |
 #define GPIO_PIN_12 GpioAction::BUTTON_PRESS_RIGHT  // RIGHT  | RIGHT  | RIGHT   | RIGHT    | RIGHT  | RIGHT  |
 #define GPIO_PIN_11 GpioAction::BUTTON_PRESS_LEFT   // LEFT   | LEFT   | LEFT    | LEFT     | LEFT   | LEFT   |
+=======
+#define GPIO_PIN_12 GpioAction::BUTTON_PRESS_UP     // UP     | UP     | UP      | UP       | UP     | UP     |
+#define GPIO_PIN_11 GpioAction::BUTTON_PRESS_DOWN   // DOWN   | DOWN   | DOWN    | DOWN     | DOWN   | DOWN   |
+#define GPIO_PIN_14 GpioAction::BUTTON_PRESS_RIGHT  // RIGHT  | RIGHT  | RIGHT   | RIGHT    | RIGHT  | RIGHT  |
+#define GPIO_PIN_13 GpioAction::BUTTON_PRESS_LEFT   // LEFT   | LEFT   | LEFT    | LEFT     | LEFT   | LEFT   |
+>>>>>>> 66d0f12299eba7fea399f0ae102fce5d5ad75495
 #define GPIO_PIN_07 GpioAction::BUTTON_PRESS_B1     // B1     | A      | B       | Cross    | 2      | K1     |
 #define GPIO_PIN_08 GpioAction::BUTTON_PRESS_B2     // B2     | B      | A       | Circle   | 3      | K2     |
 #define GPIO_PIN_05 GpioAction::BUTTON_PRESS_R2     // R2     | RT     | ZR      | R2       | 8      | K3     |
@@ -34,19 +41,34 @@
 
 // Setting GPIO pins to assigned by add-on
 //
+<<<<<<< HEAD
 #define GPIO_PIN_22 GpioAction::ASSIGNED_TO_ADDON
 #define GPIO_PIN_23 GpioAction::ASSIGNED_TO_ADDON
 #define GPIO_PIN_00 GpioAction::ASSIGNED_TO_ADDON
 #define GPIO_PIN_01 GpioAction::ASSIGNED_TO_ADDON
+=======
+#define GPIO_PIN_00 GpioAction::ASSIGNED_TO_ADDON
+#define GPIO_PIN_01 GpioAction::ASSIGNED_TO_ADDON
+#define GPIO_PIN_22 GpioAction::ASSIGNED_TO_ADDON
+#define GPIO_PIN_23 GpioAction::ASSIGNED_TO_ADDON
+>>>>>>> 66d0f12299eba7fea399f0ae102fce5d5ad75495
 #define GPIO_PIN_28 GpioAction::ASSIGNED_TO_ADDON
 
 // Keyboard Mapping Configuration
 //                                            // GP2040 | Xinput | Switch  | PS3/4/5  | Dinput | Arcade |
+<<<<<<< HEAD
 #define KEY_DPAD_UP     HID_KEY_W             // UP     | UP     | UP      | UP       | UP     | UP     |
 #define KEY_DPAD_DOWN   HID_KEY_S             // DOWN   | DOWN   | DOWN    | DOWN     | DOWN   | DOWN   |
 #define KEY_DPAD_RIGHT  HID_KEY_D             // RIGHT  | RIGHT  | RIGHT   | RIGHT    | RIGHT  | RIGHT  |
 #define KEY_DPAD_LEFT   HID_KEY_A             // LEFT   | LEFT   | LEFT    | LEFT     | LEFT   | LEFT   |
 #define KEY_BUTTON_B1   HID_KEY_J             // B1     | A      | B       | Cross    | 2      | K1     |
+=======
+#define KEY_DPAD_UP     HID_KEY_W                    // UP     | UP     | UP      | UP       | UP     | UP     |
+#define KEY_DPAD_DOWN   HID_KEY_S                      // DOWN   | DOWN   | DOWN    | DOWN     | DOWN   | DOWN   |
+#define KEY_DPAD_RIGHT  HID_KEY_D                       // RIGHT  | RIGHT  | RIGHT   | RIGHT    | RIGHT  | RIGHT  |
+#define KEY_DPAD_LEFT   HID_KEY_A                      // LEFT   | LEFT   | LEFT    | LEFT     | LEFT   | LEFT   |
+#define KEY_BUTTON_B1   HID_KEY_J                      // B1     | A      | B       | Cross    | 2      | K1     |
+>>>>>>> 66d0f12299eba7fea399f0ae102fce5d5ad75495
 #define KEY_BUTTON_B2   HID_KEY_K             // B2     | B      | A       | Circle   | 3      | K2     |
 #define KEY_BUTTON_R2   HID_KEY_L             // R2     | RT     | ZR      | R2       | 8      | K3     |
 #define KEY_BUTTON_L2   HID_KEY_G             // L2     | LT     | ZL      | L2       | 7      | K4     |
@@ -63,7 +85,11 @@
 #define KEY_BUTTON_FN   HID_KEY_ESC           // Hotkey Function                                        |
 
 #define TURBO_ENABLED 1
+<<<<<<< HEAD
 #define GPIO_PIN_16 GpioAction::BUTTON_PRESS_TURBO
+=======
+#define GPIO_PIN_18 GpioAction::BUTTON_PRESS_TURBO
+>>>>>>> 66d0f12299eba7fea399f0ae102fce5d5ad75495
 #define TURBO_LED_PIN 15
 
 #define BOARD_USB_ENABLED 1 
@@ -101,7 +127,11 @@
 #define LEDS_BUTTON_L2   11
 #define LEDS_BUTTON_R3   12
 #define LEDS_BUTTON_L3   13
+<<<<<<< HEAD
 #define LEDS_BUTTON_S2   14
+=======
+
+>>>>>>> 66d0f12299eba7fea399f0ae102fce5d5ad75495
 
  #define HAS_I2C_DISPLAY 1
  #define I2C0_ENABLED 1
@@ -119,6 +149,10 @@
 #define GPIO_PIN_26 GpioAction::SUSTAIN_DP_MODE_LS
 #define GPIO_PIN_27 GpioAction::SUSTAIN_DP_MODE_RS
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 66d0f12299eba7fea399f0ae102fce5d5ad75495
 #define DEFAULT_SPLASH \
 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, \
 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, \
@@ -185,6 +219,7 @@
 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, \
 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00
 
+<<<<<<< HEAD
 #define HOTKEY_00_AUX_MASK 0
 #define HOTKEY_00_BUTTONS_MASK (GAMEPAD_MASK_S1 | GAMEPAD_MASK_S2 | GAMEPAD_MASK_DL | GAMEPAD_MASK_DR)   // S1 + S2 + LEFT + RIGHT
 #define HOTKEY_00_DPAD_MASK 0
@@ -231,4 +266,6 @@
 #define HOTKEY_08_DPAD_MASK 0
 #define HOTKEY_08_ACTION 0
 
+=======
+>>>>>>> 66d0f12299eba7fea399f0ae102fce5d5ad75495
 #endif
