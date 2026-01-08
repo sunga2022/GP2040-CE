@@ -39,6 +39,10 @@
 #define GPIO_PIN_01 GpioAction::ASSIGNED_TO_ADDON
 #define GPIO_PIN_03 GpioAction::ASSIGNED_TO_ADDON
 #define GPIO_PIN_04 GpioAction::ASSIGNED_TO_ADDON
+#define GPIO_PIN_06 GpioAction::ASSIGNED_TO_ADDON
+#define GPIO_PIN_07 GpioAction::ASSIGNED_TO_ADDON
+#define GPIO_PIN_08 GpioAction::ASSIGNED_TO_ADDON
+#define GPIO_PIN_17 GpioAction::ASSIGNED_TO_ADDON
 #define GPIO_PIN_28 GpioAction::ASSIGNED_TO_ADDON
 
 // Keyboard Mapping Configuration
