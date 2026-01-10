@@ -26,6 +26,7 @@ on:
           - Pico16
           - Pico16N
           - Pico19
+          - hnu
 
 env:
   BUILD_TYPE: Release
