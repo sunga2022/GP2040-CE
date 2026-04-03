@@ -28,6 +28,7 @@ on:
           - Pico19
           - HaM
           - hnu
+          - G2G
 
 env:
   BUILD_TYPE: Release
