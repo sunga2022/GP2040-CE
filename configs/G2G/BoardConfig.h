@@ -9,14 +9,14 @@
 #include "enums.pb.h"
 #include "class/hid/hid.h"
 
-#define BOARD_CONFIG_LABEL "Pico"
+#define BOARD_CONFIG_LABEL "G2G"
 
 // Main pin mapping Configuration
 //                                                  // GP2040 | Xinput | Switch  | PS3/4/5  | Dinput | Arcade |
-#define GPIO_PIN_02 GpioAction::BUTTON_PRESS_UP     // UP     | UP     | UP      | UP       | UP     | UP     |
-#define GPIO_PIN_03 GpioAction::BUTTON_PRESS_DOWN   // DOWN   | DOWN   | DOWN    | DOWN     | DOWN   | DOWN   |
-#define GPIO_PIN_04 GpioAction::BUTTON_PRESS_RIGHT  // RIGHT  | RIGHT  | RIGHT   | RIGHT    | RIGHT  | RIGHT  |
-#define GPIO_PIN_05 GpioAction::BUTTON_PRESS_LEFT   // LEFT   | LEFT   | LEFT    | LEFT     | LEFT   | LEFT   |
+#define GPIO_PIN_02 GpioAction::BUTTON_PRESS_LEFT   // LEFT   | LEFT   | LEFT    | LEFT     | LEFT   | LEFT   |
+#define GPIO_PIN_03 GpioAction::BUTTON_PRESS_RIGHT  // RIGHT  | RIGHT  | RIGHT   | RIGHT    | RIGHT  | RIGHT  |
+#define GPIO_PIN_04 GpioAction::BUTTON_PRESS_UP     // UP     | UP     | UP      | UP       | UP     | UP     |
+#define GPIO_PIN_05 GpioAction::BUTTON_PRESS_DOWN   // DOWN   | DOWN   | DOWN    | DOWN     | DOWN   | DOWN   |
 #define GPIO_PIN_06 GpioAction::BUTTON_PRESS_B1     // B1     | A      | B       | Cross    | 2      | K1     |
 #define GPIO_PIN_07 GpioAction::BUTTON_PRESS_B2     // B2     | B      | A       | Circle   | 3      | K2     |
 #define GPIO_PIN_08 GpioAction::BUTTON_PRESS_R2     // R2     | RT     | ZR      | R2       | 8      | K3     |
@@ -36,7 +36,6 @@
 //
 #define GPIO_PIN_00 GpioAction::ASSIGNED_TO_ADDON
 #define GPIO_PIN_01 GpioAction::ASSIGNED_TO_ADDON
-#define GPIO_PIN_15 GpioAction::ASSIGNED_TO_ADDON
 #define GPIO_PIN_22 GpioAction::ASSIGNED_TO_ADDON
 #define GPIO_PIN_23 GpioAction::ASSIGNED_TO_ADDON
 #define GPIO_PIN_28 GpioAction::ASSIGNED_TO_ADDON
@@ -64,7 +63,7 @@
 #define KEY_BUTTON_FN   -1                    // Hotkey Function                                        |
 
 #define TURBO_ENABLED 1
-#define GPIO_PIN_16 GpioAction::BUTTON_PRESS_TURBO
+#define GPIO_PIN_14 GpioAction::BUTTON_PRESS_TURBO
 #define TURBO_LED_PIN 15
 
 #define BOARD_USB_ENABLED 1 
