@@ -28,6 +28,7 @@ on:
           - Pico19
           - HaM
           - hnu
+          - D26
           - G2G
 
 env:
