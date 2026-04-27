@@ -30,6 +30,7 @@ on:
           - hnu
           - D26
           - G2G
+          - doio
 
 env:
   BUILD_TYPE: Release
