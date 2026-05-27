@@ -30,7 +30,6 @@ on:
           - hnu
           - D26
           - G2G
-          -17PNT
           - doio
 
 env:
