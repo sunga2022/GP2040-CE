@@ -31,6 +31,7 @@ on:
           - D26
           - G2G
           - doio
+          - 17PNT
 
 env:
   BUILD_TYPE: Release
